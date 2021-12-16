@@ -25,6 +25,7 @@
     "dotenv": "^10.0.0",
     "eslint": "^8.4.1",
     "express": "^4.17.1",
+    "gitignore": "^0.7.0",
     "helmet": "^4.6.0",
     "jest": "^27.4.5",
     "jsonwebtoken": "^8.5.1",
@@ -39,7 +40,6 @@
     "url": "https://github.com/bloominstituteoftechnology/node-testing2-project/issues"
   },
   "homepage": "https://github.com/bloominstituteoftechnology/node-testing2-project#readme",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
