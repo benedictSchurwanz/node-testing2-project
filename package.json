@@ -1,12 +1,46 @@
 {
-  "name": "node-testing2-project",
+  "name": "testing2-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "rollback": "knex migrate:rollback",
+    "reset": "npm run rollback && npm run migrate && npm run seed",
+    "hardreset": "rm -f database/*.db3 && npm run migrate && npm run seed",
+    "test": "jest --verbose --watchAll"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bloominstituteoftechnology/node-testing2-project.git"
-  }
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jest": "^27.4.5",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.14",
+    "knex-cleaner": "^1.3.1",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
+  },
+  "description": "## Instructions",
+  "bugs": {
+    "url": "https://github.com/bloominstituteoftechnology/node-testing2-project/issues"
+  },
+  "homepage": "https://github.com/bloominstituteoftechnology/node-testing2-project#readme",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
